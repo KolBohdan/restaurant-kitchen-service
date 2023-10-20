@@ -1,35 +1,15 @@
-<!DOCTYPE "html">
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <title>Kitchen service</title>
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3">
-        <ul class="sidebar-nav list-group">
-          <li class="list-group-item"><a href="{% url 'kitchen:index' %}">Home</a></li>
-          <li class="list-group-item"><a href="#">All cooks</a></li>
-          <li class="list-group-item"><a href="#">All dishes</a></li>
-          <li class="list-group-item"><a href="#">All dish types</a></li>
-          <li class="list-group-item"><a href="#">All ingredients</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-9">
-        <h1>Kitchen home</h1>
-        <p>Welcome to Kitchen service Home page!</p>
-        <h3>Kitchen content:</h3>
-        <ul>
-          <li>Number of cooks: {{ num_cooks }}</li>
-          <li>Number of dishes: {{ num_dishes }}</li>
-          <li>Number of dish types: {{ num_dish_types }}</li>
-          <li>Number of dish ingredients: {{ num_ingredients }} </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}
+  <title>Home page</title>
+{% endblock %}
+{% block content %}
+  <h1>Kitchen home</h1>
+  <p>Welcome to Kitchen service Home page!</p>
+  <h3>Kitchen content:</h3>
+  <ul>
+    <li>Number of cooks: {{ num_cooks }}</li>
+    <li>Number of dishes: {{ num_dishes }}</li>
+    <li>Number of dish types: {{ num_dish_types }}</li>
+    <li>Number of dish ingredients: {{ num_ingredients }} </li>
+  </ul>
+{% endblock %}
