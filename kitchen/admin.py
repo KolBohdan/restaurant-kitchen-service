@@ -1,10 +1,16 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from kitchen.models import Dish, Cook, DishType
+from kitchen.models import (
+    Dish,
+    Cook,
+    DishType,
+    Ingredient,
+)
 
 
 admin.site.register(DishType)
+admin.site.register(Ingredient)
 
 
 @admin.register(Cook)
@@ -23,6 +29,6 @@ class CookAdmin(UserAdmin):
 
 @admin.register(Dish)
 class DishAdmin(admin.ModelAdmin):
-    list_display = ["name", "dish_type", "price", "description"]
+    list_display = ["name", "dish_type", "price", "get_cooks", "get_ingredients"]
     list_filter = ["dish_type", ]
     search_fields = ["name"]

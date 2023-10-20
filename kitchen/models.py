@@ -24,10 +24,24 @@ class Cook(AbstractUser):
         return f"{self.username} ({self.first_name} {self.last_name})"
 
 
+class Ingredient(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+
+    class Meta:
+        ordering = ("name", )
+
+    def __str__(self):
+        return self.name
+
+
 class Dish(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    ingredients = models.ManyToManyField(
+        to=Ingredient,
+        related_name="dishes"
+    )
     dish_type = models.ForeignKey(
         to=DishType,
         on_delete=models.CASCADE,
@@ -42,4 +56,11 @@ class Dish(models.Model):
         ordering = ("dish_type", )
 
     def __str__(self):
-        return f"{self.name} (price: {self.price}, dish type: {self.dish_type.name}"
+        return (f"{self.name} (price: {self.price}, "
+                f"dish type: {self.dish_type.name}")
+
+    def get_cooks(self):
+        return "; ".join([str(cook) for cook in self.cooks.all()])
+
+    def get_ingredients(self):
+        return "; ".join([str(ingredient) for ingredient in self.ingredients.all()])
