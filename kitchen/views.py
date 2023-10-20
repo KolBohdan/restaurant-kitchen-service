@@ -11,4 +11,11 @@ from kitchen.models import (
 
 def index(request: HttpRequest) -> HttpResponse:
     """View function for the home page of the site."""
-    return render(request, "kitchen/index.html")
+
+    context = {
+        "num_cooks": Cook.objects.count(),
+        "num_dishes": Dish.objects.count(),
+        "num_dish_types": DishType.objects.count(),
+        "num_ingredients": Ingredient.objects.count(),
+    }
+    return render(request, "kitchen/index.html", context=context)
