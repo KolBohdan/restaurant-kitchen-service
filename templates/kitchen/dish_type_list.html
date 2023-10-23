@@ -2,14 +2,24 @@
 
 {% block content %}
   <h1>
-    Dish Type List
+    Dish Type List <a class="btn btn-primary link-to-page" href="{% url 'kitchen:dish-type-create' %}">Create</a>
   </h1>
 
   {% if dish_type_list %}
     <table class="table">
       <tr>
-        <th>ID</th>
-        <th>Name</th>
+        <th>
+          ID
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+            Update
+          </th>
+        <th>
+          Delete
+        </th>
       </tr>
 
       {% for type in dish_type_list %}
@@ -19,6 +29,17 @@
           </td>
           <td>
               {{ type.name }}
+          </td>
+          <td>
+            <a href="{% url 'kitchen:dish-type-update' pk=type.id %}">
+              Update
+            </a>
+          </td>
+          <td>
+            <a style="color: red"
+              href="{% url 'kitchen:dish-type-delete' pk=type.id %}">
+              Delete
+            </a>
           </td>
         </tr>
       {% endfor %}
