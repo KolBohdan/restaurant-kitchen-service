@@ -17,7 +17,7 @@
       {% for dish in dish_list %}
         <tr>
           <td>
-              <a href="#">{{ dish.id }}</a>
+              <a href="{{ dish.get_absolute_url }}">{{ dish.id }}</a>
           </td>
           <td>
               {{ dish.name }}

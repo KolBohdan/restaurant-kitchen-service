@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls import reverse
 
 from restaurant_kitchen_service.settings import AUTH_USER_MODEL
 
@@ -64,3 +65,6 @@ class Dish(models.Model):
 
     def get_ingredients(self):
         return "; ".join([str(ingredient) for ingredient in self.ingredients.all()])
+
+    def get_absolute_url(self):
+        return reverse("kitchen:dish-detail", args=[str(self.id)])
