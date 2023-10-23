@@ -12,12 +12,15 @@ from kitchen.models import (
 
 def index(request: HttpRequest) -> HttpResponse:
     """View function for the home page of the site."""
+    num_visits = request.session.get("num_visits", 0)
+    request.session["num_visits"] = num_visits + 1
 
     context = {
         "num_cooks": Cook.objects.count(),
         "num_dishes": Dish.objects.count(),
         "num_dish_types": DishType.objects.count(),
         "num_ingredients": Ingredient.objects.count(),
+        "num_visits": num_visits,
     }
     return render(request, "kitchen/index.html", context=context)
 
