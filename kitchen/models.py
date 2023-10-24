@@ -61,7 +61,7 @@ class Dish(models.Model):
 
     def __str__(self):
         return (f"{self.name} (price: {self.price}, "
-                f"dish type: {self.dish_type.name}")
+                f"dish type: {self.dish_type.name})")
 
     def get_cooks(self):
         return "; ".join([str(cook) for cook in self.cooks.all()])
