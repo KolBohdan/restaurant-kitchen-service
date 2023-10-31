@@ -8,7 +8,7 @@ from kitchen.models import Cook, Dish , Ingredient
 class CookCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = Cook
-        fields = UserCreationForm.Meta.fields + ("first_name", "last_name", "years_of_experience",)
+        fields = UserCreationForm.Meta.fields + ("first_name", "last_name", "years_of_experience")
 
 
 class DishForm(forms.ModelForm):
@@ -25,3 +25,9 @@ class DishForm(forms.ModelForm):
     class Meta:
         model = Dish
         fields = "__all__"
+
+
+class ExperienceUpdateForm(forms.ModelForm):
+    class Meta:
+        model = get_user_model()
+        fields = ("years_of_experience",)
