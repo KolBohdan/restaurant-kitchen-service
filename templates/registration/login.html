@@ -1,5 +1,5 @@
 {% extends "layouts/base-fullscreen.html" %}
-
+{% load crispy_forms_filters %}
 {% block title %} Sign IN {% endblock title %}
 
 <!-- Specific CSS goes HERE -->
@@ -32,13 +32,8 @@
                 <form method="post" action="" role="form">
 
                   {% csrf_token %}
+                  {{ form|crispy }}
 
-                  <div class="mb-3">
-                    Username: {{ form.username }}
-                  </div>
-                  <div class="mb-3">
-                    Password: {{ form.password }}
-                  </div>
                   <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="rememberMe">
                     <label class="form-check-label" for="rememberMe">Remember me</label>
