@@ -1,14 +1,14 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
 from kitchen.forms import (
     CookCreationForm,
     DishForm,
-    ExperienceUpdateForm,
+    ExperienceUpdateForm, ContactForm,
 )
 from kitchen.models import (
     Cook,
@@ -16,6 +16,20 @@ from kitchen.models import (
     DishType,
     Ingredient
 )
+
+
+def contact(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            return redirect("success")
+    else:
+        form = ContactForm()
+    return render(request, "contact.html", {'form': form})
+
+
+def success(request: HttpRequest) -> HttpResponse:
+    return render(request, "success.html")
 
 
 @login_required

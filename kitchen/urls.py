@@ -2,6 +2,8 @@ from django.urls import path
 
 from .views import (
     index,
+    contact,
+    success,
     DishTypeListView,
     DishListView,
     DishDetailView,
@@ -24,6 +26,8 @@ from .views import (
 
 urlpatterns = [
     path("", index, name="index"),
+    path("contact/", contact, name="contact"),
+    path("success/", success, name="success"),
 
     path("dish-types/", DishTypeListView.as_view(), name="dish-type-list"),
     path("dish-types/create/", DishTypeCreateView.as_view(), name="dish-type-create"),
