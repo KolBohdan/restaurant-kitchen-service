@@ -1,0 +1,17 @@
+{% load crispy_forms_filters %}
+<style>
+  .form-inline {
+    display: flex;
+    align-items: center;
+  }
+  .form-inline {
+    margin-right: 10px;
+  }
+  .form-inline input[type="text"] {
+    padding: 10px 12px;
+  }
+</style>
+<form action="" method="get" class="form-inline">
+  {{ search_form|crispy }}
+  <input class="btn btn-secondary" type="submit" value="🔍">
+</form>
