@@ -76,6 +76,16 @@ class PrivateAccessTest(TestCase):
         )
         self.assertTemplateUsed(response, "kitchen/dish_type_list.html")
 
+    def test_retrive_ingredients(self):
+        response = self.client.get(INGREDIENT_URL)
+        self.assertEqual(response.status_code, 200)
+        ingredients = Ingredient.objects.all()
+        self.assertEqual(
+            list(response.context["ingredient_list"]),
+            list(ingredients)
+        )
+        self.assertTemplateUsed(response, "kitchen/ingredient_list.html")
+
     def test_retrive_dishes(self):
         response = self.client.get(DISH_URL)
         self.assertEqual(response.status_code, 200)
@@ -95,3 +105,39 @@ class PrivateAccessTest(TestCase):
             list(cooks)
         )
         self.assertTemplateUsed(response, "kitchen/cook_list.html")
+
+
+class PrivateCookTests(TestCase):
+    def setUp(self) -> None:
+        self.user = get_user_model().objects.create_user(
+            username="test",
+            password="password123"
+        )
+        self.client.force_login(self.user)
+
+    def test_create_cook(self):
+        form_data = {
+            "username": "test_user",
+            "password1": "test12345",
+            "password2": "test12345",
+            "first_name": "test_first_name",
+            "last_name": "test_second_name",
+            "years_of_experience": 5
+        }
+
+        self.client.post(
+            reverse("kitchen:cook-create"), data=form_data
+        )
+        new_user = get_user_model().objects.get(
+            username=form_data["username"]
+        )
+
+        self.assertEqual(
+            new_user.first_name, form_data["first_name"]
+        )
+        self.assertEqual(
+            new_user.last_name, form_data["last_name"]
+        )
+        self.assertEqual(
+            new_user.years_of_experience, form_data["years_of_experience"]
+        )
