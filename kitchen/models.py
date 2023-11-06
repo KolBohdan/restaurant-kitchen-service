@@ -67,7 +67,12 @@ class Dish(models.Model):
         return "; ".join([str(cook) for cook in self.cooks.all()])
 
     def get_ingredients(self):
-        return "; ".join([str(ingredient) for ingredient in self.ingredients.all()])
+        return "; ".join(
+            [
+                str(ingredient)
+                for ingredient in self.ingredients.all()
+            ]
+        )
 
     def get_absolute_url(self):
         return reverse("kitchen:dish-detail", args=[str(self.id)])

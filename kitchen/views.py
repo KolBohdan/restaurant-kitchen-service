@@ -11,7 +11,10 @@ from kitchen.forms import (
     DishForm,
     ExperienceUpdateForm,
     ContactForm,
-    DishTypeNameSearchForm, DishNameSearchForm, IngredientNameSearchForm, CookUsernameSearchForm,
+    DishTypeNameSearchForm,
+    DishNameSearchForm,
+    IngredientNameSearchForm,
+    CookUsernameSearchForm,
 )
 from kitchen.models import (
     Cook,
