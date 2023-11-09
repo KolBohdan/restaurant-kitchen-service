@@ -1,0 +1,68 @@
+{% extends "layouts/base-presentation.html" %}
+
+{% block title %} Dish Detail {% endblock title %}
+
+{% block content %}
+  <div class="bg-gradient-faded-light-vertical">
+    <div class="container mt-7">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>
+            Name: {{ dish.name }}
+            <a href="{% url 'kitchen:dish-update' pk=dish.pk %}" class="btn btn-primary">
+              Update
+            </a>
+            <a href="{% url 'kitchen:dish-delete' pk=dish.pk %}" class="btn btn-danger">Delete</a>
+          </h1>
+          <p><strong>Dish Type: </strong>{{ dish.dish_type }}</p>
+          <p><strong>Price: </strong>{{ dish.price }}</p>
+          <p><strong>Description: </strong>{{ dish.description }}</p>
+          <h3>Ingredients:</h3>
+          {% for ingredient in dish.ingredients.all %}
+            <ul>
+              <li class="text-primary">{{ ingredient.name }}</li>
+            </ul>
+          {% empty %}
+            <p>No ingredients yet.</p>
+          {% endfor %}
+          <div class="ml-3">
+            <h3>Cooks:</h3>
+            {% if dish.cooks.all %}
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cook name</th>
+                    <th scope="col">Cook experience</th>
+                    <th scope="col">Info</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for cook in dish.cooks.all %}
+                  <tr>
+                    <td>
+                        {{ cook.id }}
+                    </td>
+                    <td>
+                        {{ cook.get_full_name }}
+                    </td>
+                    <td>
+                        {{ cook.years_of_experience }}
+                    </td>
+                    <td>
+                      <a class="link-info" href="{% url 'kitchen:cook-detail' pk=cook.pk %}">Click here to see detail</a>
+                    </td>
+                  </tr>
+                {% endfor %}
+               </tbody>
+              </table>
+              {% include "includes/pagination.html" %}
+            {% else %}
+              <p>No cooks yet</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

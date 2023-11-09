@@ -1,0 +1,558 @@
+[
+  {
+    "model": "kitchen.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "Appetizer"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Main Course"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 3,
+    "fields": {
+      "name": "Side Dish"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 4,
+    "fields": {
+      "name": "Dessert"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 5,
+    "fields": {
+      "name": "Soup"
+    }
+  },
+  {
+    "model": "kitchen.dishtype",
+    "pk": 6,
+    "fields": {
+      "name": "Salad"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 1,
+    "fields": {
+      "name": "Ground beef"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "American cheese"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "Potatoes"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 4,
+    "fields": {
+      "name": "Chocolate cake mix"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 5,
+    "fields": {
+      "name": "Lettuce"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 6,
+    "fields": {
+      "name": "Tomato"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 7,
+    "fields": {
+      "name": "Onion"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 8,
+    "fields": {
+      "name": "Carrots"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 9,
+    "fields": {
+      "name": "Celery"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 10,
+    "fields": {
+      "name": "Chicken broth"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 11,
+    "fields": {
+      "name": "Croutons"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 12,
+    "fields": {
+      "name": "Parmesan cheese"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 13,
+    "fields": {
+      "name": "Olive oil"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 14,
+    "fields": {
+      "name": "Red wine vinegar"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 15,
+    "fields": {
+      "name": "Garlic"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 16,
+    "fields": {
+      "name": "Ginger"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 17,
+    "fields": {
+      "name": "Soy sauce"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 18,
+    "fields": {
+      "name": "Sriracha sauce"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 19,
+    "fields": {
+      "name": "Sesame oil"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 20,
+    "fields": {
+      "name": "Rice"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 21,
+    "fields": {
+      "name": "Noodles"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 22,
+    "fields": {
+      "name": "Black beans"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 23,
+    "fields": {
+      "name": "Corn"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 24,
+    "fields": {
+      "name": "Flour tortillas"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 25,
+    "fields": {
+      "name": "Salsa"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 26,
+    "fields": {
+      "name": "Chicken breasts"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 27,
+    "fields": {
+      "name": "Steak"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 28,
+    "fields": {
+      "name": "Fish"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 29,
+    "fields": {
+      "name": "Vegetables"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 30,
+    "fields": {
+      "name": "Cream sauce"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 31,
+    "fields": {
+      "name": "Bread crumbs"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 32,
+    "fields": {
+      "name": "Almonds"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 33,
+    "fields": {
+      "name": "Mayonnaise"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 34,
+    "fields": {
+      "name": "Chocolate chips"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 35,
+    "fields": {
+      "name": "Whipped cream"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 36,
+    "fields": {
+      "name": "Chocolate sauce"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 37,
+    "fields": {
+      "name": "Sprinkles"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 38,
+    "fields": {
+      "name": "Fruit"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 39,
+    "fields": {
+      "name": "Apple pie crust"
+    }
+  },
+  {
+    "model": "kitchen.ingredient",
+    "pk": 40,
+    "fields": {
+      "name": "Apple pie filling"
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": true,
+      "username": "admin.user",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin.user@kitchen.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "years_of_experience": 30,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "joyce.byers",
+      "first_name": "Joyce",
+      "last_name": "Byers",
+      "email": "joyce.byers@kitchen.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:17:04Z",
+      "years_of_experience": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jim.hopper",
+      "first_name": "Jim",
+      "last_name": "Hopper",
+      "email": "jim.hopper@kitchen.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "years_of_experience": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jonathan.byers",
+      "first_name": "Jonathan",
+      "last_name": "Byers",
+      "email": "jonathan.byers@kitchen.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "years_of_experience": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "dustin.henderson",
+      "first_name": "Dustin",
+      "last_name": "Henderson",
+      "email": "dustin.henderson@kitchen.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 10,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen.cook",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mike.wheeler",
+      "first_name": "Mike",
+      "last_name": "Wheeler",
+      "email": "mike.wheeler@kitchen.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 8,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 1,
+    "fields": {
+      "name": "Hamburger",
+      "description": "A juicy hamburger with all the fixings.",
+      "price": 10.99,
+      "ingredients": [1, 2, 5, 6, 7],
+      "dish_type": 2,
+      "cooks": [1, 2, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 2,
+    "fields": {
+      "name": "French Fries",
+      "description": "A basket of golden brown French fries.",
+      "price": 3.99,
+      "ingredients": [3],
+      "dish_type": 3,
+      "cooks": [1, 2, 3, 4]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 3,
+    "fields": {
+      "name": "Chocolate Cake",
+      "description": "A delicious chocolate cake.",
+      "price": 5.99,
+      "ingredients": [4],
+      "dish_type": 4,
+      "cooks": [6]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 4,
+    "fields": {
+      "name": "Caesar Salad",
+      "description": "A classic Caesar salad with romaine lettuce, Parmesan cheese, and croutons.",
+      "price": 7.99,
+      "ingredients": [5, 11, 12],
+      "dish_type": 6,
+      "cooks": [2, 3, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 5,
+    "fields": {
+      "name": "Black Bean Tacos",
+      "description": "Tacos filled with black beans, lettuce, tomato, and salsa.",
+      "price": 8.99,
+      "ingredients": [22, 5, 6, 25],
+      "dish_type": 2,
+      "cooks": [1, 2, 5]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 6,
+    "fields": {
+      "name": "Chicken Fajitas",
+      "description": "Chicken breasts grilled and sliced, served with tortillas, your favorite toppings, and salsa.",
+      "price": 10.99,
+      "ingredients": [26, 5, 6, 25],
+      "dish_type": 2,
+      "cooks": [3, 6]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 7,
+    "fields": {
+      "name": "Steak Tacos",
+      "description": "Grilled steak sliced and served with tortillas, your favorite toppings, and salsa.",
+      "price": 12.99,
+      "ingredients": [27, 5, 6, 25],
+      "dish_type": 2,
+      "cooks": [1]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 8,
+    "fields": {
+      "name": "Fish Tacos",
+      "description": "Grilled fish served with tortillas, your favorite toppings, and salsa.",
+      "price": 14.99,
+      "ingredients": [28, 5, 6, 25],
+      "dish_type": 2,
+      "cooks": [4, 6]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 9,
+    "fields": {
+      "name": "Pasta Primavera",
+      "description": "Pasta tossed with vegetables and a light cream sauce.",
+      "price": 9.99,
+      "ingredients": [21, 29, 30],
+      "dish_type": 2,
+      "cooks": [1, 2]
+    }
+  },
+  {
+    "model": "kitchen.dish",
+    "pk": 10,
+    "fields": {
+      "name": "Stir-Fry",
+      "description": "Vegetables and meat stir-fried in a soy sauce-based sauce.",
+      "price": 11.99,
+      "ingredients": [29, 17, 19],
+      "dish_type": 2,
+      "cooks": [1, 5]
+    }
+  }
+]

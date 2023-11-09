@@ -1,0 +1,24 @@
+{% extends "layouts/base-presentation.html" %}
+
+{% block title %} Delete {% endblock title %}
+
+{% block content %}
+  <div class="bg-gradient-faded-light-vertical">
+    <div class="container mt-7">
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+          <h1>Delete Cook "{{ cook.get_full_name }} ({{ cook.username }})"</h1>
+          <br>
+          <h5>Are you sure you want to delete cook "{{ cook.get_full_name }}"?</h5>
+          <br>
+          <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Yes, delete" class="btn btn-danger">
+            <a href="{% url 'kitchen:cook-detail' cook.pk %}" class="btn btn-secondary">No, cancel</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
