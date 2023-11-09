@@ -6,9 +6,9 @@ This is a Django project for a restaurant kitchen service. It allows users to ma
 
 ## Check it out!
 [Restaurant Kitchen project deployed to Render](https://restaurant-kitchen-service-yjr5.onrender.com)
-You can use these login details:
-Login: test_user
-Password: user12345
+.You can use these login details:
+* Login: test_user
+* Password: user12345
 
 ## Installation
 
