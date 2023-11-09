@@ -4,6 +4,9 @@ This is a Django project for a restaurant kitchen service. It allows users to ma
 
 ![Chef](static/assets/img/illustrations/chef.png)
 
+## Check it out!
+[Restaurant Kitchen project deployed to Render](https://restaurant-kitchen-service-yjr5.onrender.com)
+
 ## Installation
 
 Python3 must be already installed
